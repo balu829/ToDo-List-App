@@ -59,3 +59,10 @@ function toDoListener(responseText){
 
 };
 var close1 = document.getElementsByClassName("close");
+
+//Adding event listener to add button on load
+window.onload=function(){
+  var addBtn=document.getElementById("but");
+  addBtn.addEventListener('click',addToDOListener);
+};
+
