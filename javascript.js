@@ -115,6 +115,11 @@ var addToDOListener=function (){
   document.getElementById("title").value="";
   document.getElementById("item").value="";
   document.getElementById("author").value="";
- 
+   for (j = 0; j < close1.length; j++) {
+  close1[j].onclick= function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    };
+  }
 
 };
