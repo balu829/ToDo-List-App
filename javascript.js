@@ -66,3 +66,40 @@ window.onload=function(){
   addBtn.addEventListener('click',addToDOListener);
 };
 
+var htm1=document.getElementById("todoItems");
+var div1=document.getElementById("divToDoItems");
+var addToDOListener=function (){
+  var title=document.getElementById("title").value;
+  var item=document.getElementById("item").value;
+  var author=document.getElementById("author").value;
+  if(title===""){
+    alert("Please add title");
+    return;
+  }
+  if(item===""){
+    alert("Please add description");
+    return;
+  }
+  if(date===""){
+    alert("Please add date");
+    return;
+  }
+  var details=document.createElement("details");
+  var summary=document.createElement("summary");
+  var p=document.createElement("p");
+  var summaryText=document.createTextNode(title);
+  var pText=document.createTextNode("Item: " +item);
+  summary.appendChild(summaryText);
+  p.appendChild(pText);
+  var br=document.createElement("br");
+  p.appendChild(br);
+  var br1=document.createElement("br");
+  p.appendChild(br1);
+  pText=document.createTextNode("Author: " + date);
+  p.appendChild(pText);
+  var br=document.createElement("br");
+  
+    };
+  }
+
+};
