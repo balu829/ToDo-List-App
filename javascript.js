@@ -48,7 +48,7 @@ function toDoListener(responseText){
     details.appendChild(p);
     div.appendChild(details);
 	
-	
+	//Adding event listeners to each details element
 	    for (j = 0; j < close1.length; j++) {
     close1[j].onclick= function() {
         var div = this.parentElement;
@@ -58,3 +58,4 @@ function toDoListener(responseText){
 }
 
 };
+var close1 = document.getElementsByClassName("close");
