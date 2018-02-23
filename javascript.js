@@ -98,8 +98,23 @@ var addToDOListener=function (){
   pText=document.createTextNode("Author: " + date);
   p.appendChild(pText);
   var br=document.createElement("br");
-  
-    };
-  }
+  p.appendChild(br);
+  var br1=document.createElement("br");
+  p.appendChild(br1);
+  var date=new Date();
+  pText=document.createTextNode("Date created: " + date.toDateString());
+  p.appendChild(pText);
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  details.appendChild(span);
+  details.appendChild(summary);
+  details.appendChild(p);
+  div1.appendChild(details);
+  document.getElementById("title").value="";
+  document.getElementById("item").value="";
+  document.getElementById("author").value="";
+ 
 
 };
