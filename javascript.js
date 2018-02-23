@@ -84,30 +84,31 @@ var addToDOListener=function (){
     alert("Please add date");
     return;
   }
-  var details=document.createElement("details");
-  var summary=document.createElement("summary");
-  var p=document.createElement("p");
+  var details=document.createElement("details");//creating details element
+  var summary=document.createElement("summary");//creating summary element
+  var p=document.createElement("p");//creating p element
   var summaryText=document.createTextNode(title);
-  var pText=document.createTextNode("Item: " +item);
-  summary.appendChild(summaryText);
+  var pText=document.createTextNode("Item: " +item);//creating text node
+  summary.appendChild(summaryText); //appending text node.... This is same for all p elements as well
   p.appendChild(pText);
   var br=document.createElement("br");
   p.appendChild(br);
   var br1=document.createElement("br");
   p.appendChild(br1);
-  pText=document.createTextNode("Author: " + date);
+  pText=document.createTextNode("Author: " + author);
   p.appendChild(pText);
   var br=document.createElement("br");
   p.appendChild(br);
   var br1=document.createElement("br");
   p.appendChild(br1);
   var date=new Date();
-  pText=document.createTextNode("Date created: " + date.toDateString());
+  pText=document.createTextNode("Date created: " + date.toDateString());//adding current date
   p.appendChild(pText);
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
+  //appending all elements to details tag 
   details.appendChild(span);
   details.appendChild(summary);
   details.appendChild(p);
@@ -115,6 +116,7 @@ var addToDOListener=function (){
   document.getElementById("title").value="";
   document.getElementById("item").value="";
   document.getElementById("author").value="";
+  //Adding event listeners to each details element
    for (j = 0; j < close1.length; j++) {
   close1[j].onclick= function() {
       var div = this.parentElement;
