@@ -80,8 +80,8 @@ var addToDOListener=function (){
     alert("Please add description");
     return;
   }
-  if(date===""){
-    alert("Please add date");
+  if(author===""){
+    alert("Please add author");
     return;
   }
   var details=document.createElement("details");//creating details element
